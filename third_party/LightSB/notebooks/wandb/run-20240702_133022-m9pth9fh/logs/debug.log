@@ -1,0 +1,44 @@
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Configure stats pid to 4560
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Loading settings from C:\Users\georg\.config\wandb\settings
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Loading settings from C:\Users\georg\Desktop\LightSB-main\notebooks\wandb\settings
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:_log_setup():520] Logging user logs to C:\Users\georg\Desktop\LightSB-main\notebooks\wandb\run-20240702_133022-m9pth9fh\logs\debug.log
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:_log_setup():521] Logging internal logs to C:\Users\georg\Desktop\LightSB-main\notebooks\wandb\run-20240702_133022-m9pth9fh\logs\debug-internal.log
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:_jupyter_setup():466] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000017D9E99F460>
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:init():560] calling init triggers
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'DIM': 2, 'D_LR': 0.06, 'BATCH_SIZE': 128, 'EPSILON': 10, 'D_GRADIENT_MAX_NORM': inf, 'N_POTENTIALS': 50, 'INIT_BY_SAMPLES': True, 'SEED': 42}
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_init.py:init():585] re-initializing run, found existing run on stack: vl0syso9
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_run.py:_finish():2109] finishing run dcsl/uncategorized/vl0syso9
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_run.py:_atexit_cleanup():2349] got exitcode: 0
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_run.py:_restore():2332] restore
+2024-07-02 13:30:22,841 INFO    MainThread:4560 [wandb_run.py:_restore():2338] restore done
+2024-07-02 13:30:27,377 INFO    MainThread:4560 [wandb_run.py:_footer_history_summary_info():3991] rendering history
+2024-07-02 13:30:27,377 INFO    MainThread:4560 [wandb_run.py:_footer_history_summary_info():4023] rendering summary
+2024-07-02 13:30:27,377 INFO    MainThread:4560 [wandb_run.py:_footer_sync_info():3950] logging synced files
+2024-07-02 13:30:27,460 INFO    MainThread:4560 [wandb_init.py:init():610] starting backend
+2024-07-02 13:30:27,461 INFO    MainThread:4560 [wandb_init.py:init():614] setting up manager
+2024-07-02 13:30:27,463 INFO    MainThread:4560 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-07-02 13:30:27,464 INFO    MainThread:4560 [wandb_init.py:init():622] backend started and connected
+2024-07-02 13:30:27,475 INFO    MainThread:4560 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-07-02 13:30:27,476 INFO    MainThread:4560 [wandb_run.py:_label_probe_notebook():1344] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-07-02 13:30:27,476 INFO    MainThread:4560 [wandb_init.py:init():711] updated telemetry
+2024-07-02 13:30:27,477 INFO    MainThread:4560 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-07-02 13:30:28,598 INFO    MainThread:4560 [wandb_run.py:_on_init():2402] communicating current version
+2024-07-02 13:30:28,676 INFO    MainThread:4560 [wandb_run.py:_on_init():2411] got version response 
+2024-07-02 13:30:28,676 INFO    MainThread:4560 [wandb_init.py:init():795] starting run threads in backend
+2024-07-02 13:30:29,125 INFO    MainThread:4560 [wandb_run.py:_console_start():2380] atexit reg
+2024-07-02 13:30:29,128 INFO    MainThread:4560 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-07-02 13:30:29,128 INFO    MainThread:4560 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-07-02 13:30:29,128 INFO    MainThread:4560 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-07-02 13:30:29,128 INFO    MainThread:4560 [wandb_init.py:init():838] run started, returning control to user process
+2024-07-02 13:31:02,306 INFO    MainThread:4560 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-07-02 13:31:02,306 INFO    MainThread:4560 [wandb_init.py:_pause_backend():431] pausing backend
+2024-07-02 13:31:37,014 INFO    MainThread:4560 [wandb_init.py:_resume_backend():436] resuming backend
+2024-07-02 13:33:28,082 INFO    MainThread:4560 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-07-02 13:33:28,082 INFO    MainThread:4560 [wandb_init.py:_pause_backend():431] pausing backend

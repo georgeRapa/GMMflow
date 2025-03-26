@@ -1,0 +1,8 @@
+/third_party/LightSB/ALAE/training_artifacts/bedroom/model_final.pth
+/third_party/LightSB/ALAE/training_artifacts/celeba/model_final.pth
+/third_party/LightSB/ALAE/training_artifacts/celeba-hq256/model_262r.pth
+/third_party/LightSB/ALAE/training_artifacts/celeba-hq256/model_580r.pth
+/third_party/LightSB/data/age.npy
+/third_party/LightSB/data/gender.npy
+/third_party/LightSB/data/latents.npy
+/third_party/LightSB/data/test_images.npy

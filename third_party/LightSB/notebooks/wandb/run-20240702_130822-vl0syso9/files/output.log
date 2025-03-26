@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 70%|██████▉   | 6971/10000 [00:59<00:25, 117.69it/s]
+<xml><var name="_dummy_ipython_val"  />
+<var name="_dummy_special_var"  />
+<var name="BATCH_SIZE" type="int" qualifier="builtins" value="128" />
+<var name="CONTINUE" type="int" qualifier="builtins" value="-1" />
+<var name="D" type="ParametrizedLightSB" qualifier="geotorch.parametrize" value="ParametrizedLightSB%28%0A  %28parametrizations%29%3A ModuleDict%28%0A    %28S_rotation_matrix%29%3A ParametrizationList%28%0A      %280%29%3A Stiefel%28n=2%2C k=2%2C tensorial_size=%2850%2C%29%2C triv=linalg_matrix_exp%29%0A    %29%0A  %29%0A%29" isContainer="True" />
+<var name="DIM" type="int" qualifier="builtins" value="2" />
+<var name="D_GRADIENT_MAX_NORM" type="float" qualifier="builtins" value="inf" />
+<var name="D_LR" type="float" qualifier="builtins" value="0.06" />
+<var name="D_gradient_norm" type="Tensor" qualifier="torch" value="tensor%280.2890%29" isContainer="True" shape="()" />
+<var name="D_loss" type="Tensor" qualifier="torch" value="tensor%280.5115%2C grad_fn=%3CMeanBackward0&gt;%29" isContainer="True" shape="()" />
+<var name="D_opt" type="Adam" qualifier="torch.optim.adam" value="Adam %28%0AParameter Group 0%0A    amsgrad%3A False%0A    betas%3A %280.9%2C 0.999%29%0A    capturable%3A False%0A    differentiable%3A False%0A    eps%3A 1e-08%0A    foreach%3A None%0A    fused%3A None%0A    lr%3A 0.06%0A    maximize%3A False%0A    weight_decay%3A 0%0A%29" isContainer="True" />
+<var name="EPSILON" type="int" qualifier="builtins" value="10" />
+<var name="EXP_NAME" type="str" qualifier="builtins" value="EOT_benchmark_EPSILON_10_DIM_2_SEED_42" />
+<var name="INIT_BY_SAMPLES" type="bool" qualifier="builtins" value="True" />
+<var name="IS_DIAGONAL" type="bool" qualifier="builtins" value="True" />
+<var name="MAX_STEPS" type="int" qualifier="builtins" value="10000" />
+<var name="N_POTENTIALS" type="int" qualifier="builtins" value="50" />
+<var name="OUTPUT_PATH" type="str" qualifier="builtins" value="../checkpoints/EOT_benchmark_EPSILON_10_DIM_2_SEED_42" />
+<var name="PCA" type="ABCMeta" qualifier="abc" value="%3Cclass %27sklearn.decomposition._pca.PCA%27&gt;" isContainer="True" />
+<var name="SAMPLING_BATCH_SIZE" type="int" qualifier="builtins" value="128" />
+<var name="SEED" type="int" qualifier="builtins" value="42" />
+<var name="X0" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 0.4027%2C -1.0801%5D%2C%0A        %5B-0.0046%2C  0.3290%5D%2C%0A        %5B 0.2601%2C -0.7964%5D%2C%0A        %5B 0.3550%2C  0.4854%5D%2C%0A        %5B-0.88...458%2C -0.3880%5D%2C%0A        %5B 0.3172%2C  0.0606%5D%2C%0A        %5B 0.7929%2C  0.4568%5D%2C%0A        %5B-0.9382%2C -0.1244%5D%2C%0A        %5B 0.3142%2C  0.3029%5D%5D%29" isContainer="True" shape="(128, 2)" />
+<var name="X1" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 2.2322%2C  4.6346%5D%2C%0A        %5B 4.4456%2C  2.1888%5D%2C%0A        %5B-3.3532%2C -3.4709%5D%2C%0A        %5B-3.4806%2C -3.6414%5D%2C%0A        %5B 4.40...082%2C -3.4918%5D%2C%0A        %5B-3.1744%2C  3.7883%5D%2C%0A        %5B 2.1620%2C  4.7989%5D%2C%0A        %5B-3.6714%2C -3.3203%5D%2C%0A        %5B-3.2671%2C  3.7870%5D%5D%29" isContainer="True" shape="(128, 2)" />
+<var name="X_sampler" type="GaussianMixture" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.GaussianMixture object at 0x0000017D90B42320&gt;" isContainer="True" />
+<var name="Y_sampler" type="OutputSampler" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.OutputSampler object at 0x0000017D909635E0&gt;" isContainer="True" />
+<var name="config" type="dict" qualifier="builtins" value="%7B%27BATCH_SIZE%27%3A 128%2C %27DIM%27%3A 2%2C %27D_GRADIENT_MAX_NORM%27%3A inf%2C %27D_LR%27%3A 0.06%2C %27EPSILON%27%3A 10%2C %27INIT_BY_SAMPLES%27%3A True%2C %27N_POTENTIALS%27%3A 50%2C %27SEED%27%3A 42%7D" isContainer="True" shape="8" />
+<var name="ground_truth_plan_sampler" type="PlanSampler" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.PlanSampler object at 0x0000017D92A3C610&gt;" isContainer="True" />
+<var name="log_C" type="Tensor" qualifier="torch" value="tensor%28%5B0.3650%2C 0.2247%2C 0.1563%2C 0.1868%2C 0.1917%2C 0.1059%2C 0.2242%2C 0.3068%2C 0.1710%2C%0A        0.0922%2C 0.2076%2C 0.1854%2C 0.4166%2C 0.1054... 0.1259%2C 0.2209%2C 0.1380%2C 0.1715%2C 0.1699%2C 0.1908%2C 0.2190%2C 0.1951%2C 0.1733%2C%0A        0.2808%2C 0.1811%5D%2C grad_fn=%3CLogsumexpBackward0&gt;%29" isContainer="True" shape="(128,)" />
+<var name="log_potential" type="Tensor" qualifier="torch" value="tensor%28%5B-1.0225%2C  0.1968%2C  1.0938%2C -0.6963%2C -0.2466%2C -0.3396%2C -1.3817%2C -0.6849%2C%0A         0.0685%2C  0.4026%2C -0.5364%2C  0.2874%2C -0....6476%2C -1.4585%2C%0A        -1.1928%2C  0.3356%2C -0.9142%2C -0.5025%2C -1.4289%2C -0.4130%2C  0.0152%2C  0.5602%5D%2C%0A       grad_fn=%3CAddBackward0&gt;%29" isContainer="True" shape="(128,)" />
+<var name="pca" type="PCA" qualifier="sklearn.decomposition._pca" value="PCA%28n_components=2%29" isContainer="True" />
+<var name="samples" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 0.7230%2C  0.2386%5D%2C%0A        %5B-0.2614%2C  0.0792%5D%2C%0A        %5B 0.0419%2C -0.2228%5D%2C%0A        ...%2C%0A        %5B-0.2551%2C  0.1862%5D%2C%0A        %5B 0.0468%2C -0.3379%5D%2C%0A        %5B 0.3564%2C  0.6292%5D%5D%29" isContainer="True" shape="(10000, 2)" />
+<var name="samples_pca" type="ndarray" qualifier="numpy" value="%5B%5B-0.64258599 -1.39104054%5D%2C %5B 0.14214965 -0.7757519 %5D%2C %5B 0.15839601 -1.20342986%5D%2C %5B 0.00627996 -1.37086062%5D%2C %5B 0.03848707 -1.13367464%5D%2C %5B 0.08137704 -0.74363009%5D%2C %5B-0.15759562 -1.15412894%5D%2C %5B 0.0946487  -0.42592297%5D%2C %5B 0.89316808 -1.23713706%5D%2C %5B-0.20076208 -1.20033024%5D%2C %5B-0.39000342 -1.20202045%5D%2C %5B 0.43718463 -0.64066041%5D%2C %5B-0.29346575 -0.65760409%5D%2C %5B-0.60118483 -1.05343862%5D%2C %5B 0.70337161 -0.48647035%5D%2C %5B 0.44636301 -0.82493898%5D%2C %5B 0.15755328 -0.61999751%5D%2C %5B 0.36807363 -1.09700221%5D%2C %5B 0.20173866 -1.43169679%5D%2C %5B-0.80072853 -1.00279519%5D%2C %5B-0.14918438 -1.92573233%5D%2C %5B 0.42674556 -2.1241168 %5D%2C %5B 0.5265156  -0.27738101%5D%2C %5B-0.54438619 -1.07393912%5D%2C %5B 0.18413944 -0.58371076%5D%2C %5B-0.93806351 -1.52907549%5D%2C %5B 0.15111209 -0.57906922%5D%2C %5B-0.26971707 -1.35600816%5D%2C %5B 0.43153324 -1.83198595%5D%2C %5B-1.03161494 -0.95731179%5D%2C %5B-0.65609377 -1.01628065%5D%2C %5B 0.03692231 -1.65529991%5D%2C %5B 0.2575454  -1.4025663 %5D%2C %5B-0.23923321 -0.51376974%5D%2C %5B-0.90928816 -1.25524611%5D%2C %5B 0.02363999 -0.49785422%5D%2C %5B 1.10139623 -0.93563775%5D%2C ..." isContainer="True" shape="(10000, 2)" />
+<var name="step" type="int" qualifier="builtins" value="6971" />
+<var name="target_samples" type="Tensor" qualifier="torch" value="tensor%28%5B%5B-3.6505%2C -3.6790%5D%2C%0A        %5B 4.4751%2C  2.3819%5D%2C%0A        %5B-3.1542%2C  3.8455%5D%2C%0A        ...%2C%0A        %5B-3.7946%2C -3.5502%5D%2C%0A        %5B-3.3077%2C  3.8491%5D%2C%0A        %5B-3.5310%2C -3.5500%5D%5D%29" isContainer="True" shape="(10000, 2)" />
+<var name="target_samples_pca" type="ndarray" qualifier="numpy" value="%5B%5B 5.20237645 -0.83373689%5D%2C %5B-4.76224827 -2.69497615%5D%2C %5B-0.66392913  3.90435067%5D%2C %5B-4.66299888  0.74195066%5D%2C %5B-0.52347749  3.70133567%5D%2C %5B-4.77996918 -2.84331596%5D%2C %5B-4.7506567  -2.87252082%5D%2C %5B-0.47655736  3.95256388%5D%2C %5B 5.15459223 -0.62237789%5D%2C %5B-4.48763954 -2.74936818%5D%2C %5B-4.64765127  0.59198808%5D%2C %5B-4.76889796  0.65557118%5D%2C %5B-4.78751546 -2.69105873%5D%2C %5B-4.92428553  0.53376671%5D%2C %5B-4.6822179   0.72083753%5D%2C %5B-0.33184795  4.07623002%5D%2C %5B 4.95575919 -0.79308409%5D%2C %5B-4.7058346  -2.99802667%5D%2C %5B-4.48833737 -3.0013081 %5D%2C %5B-0.68244157  3.94851776%5D%2C %5B-0.44941714  3.84324924%5D%2C %5B 4.92630206 -0.88961237%5D%2C %5B-0.46715682  3.89184918%5D%2C %5B 4.94345974 -0.91422518%5D%2C %5B-4.78930903  0.78101026%5D%2C %5B 5.16907268 -0.44794421%5D%2C %5B-4.75766824  0.56543643%5D%2C %5B-4.8658317   0.81098198%5D%2C %5B-4.7733495  -2.83229777%5D%2C %5B-4.73824721  0.70880356%5D%2C %5B-4.63743026  0.69210235%5D%2C %5B-4.85810416  0.66436266%5D%2C %5B 5.05649381 -0.71970997%5D%2C %5B-0.45925022  3.83254391%5D%2C %5B-0.50044318  3.83888959%5D%2C %5B 5.11130076 -0.72315736%5D%2C %5B-0.78929163  4.0057374 %5D%2C ..." isContainer="True" shape="(10000, 2)" />
+</xml>
+<xml><var name="_dummy_ipython_val"  />
+<var name="_dummy_special_var"  />
+<var name="BATCH_SIZE" type="int" qualifier="builtins" value="128" />
+<var name="CONTINUE" type="int" qualifier="builtins" value="-1" />
+<var name="D" type="ParametrizedLightSB" qualifier="geotorch.parametrize" value="ParametrizedLightSB%28%0A  %28parametrizations%29%3A ModuleDict%28%0A    %28S_rotation_matrix%29%3A ParametrizationList%28%0A      %280%29%3A Stiefel%28n=2%2C k=2%2C tensorial_size=%2850%2C%29%2C triv=linalg_matrix_exp%29%0A    %29%0A  %29%0A%29" isContainer="True" />
+<var name="DIM" type="int" qualifier="builtins" value="2" />
+<var name="D_GRADIENT_MAX_NORM" type="float" qualifier="builtins" value="inf" />
+<var name="D_LR" type="float" qualifier="builtins" value="0.06" />
+<var name="D_gradient_norm" type="Tensor" qualifier="torch" value="tensor%280.2890%29" isContainer="True" shape="()" />
+<var name="D_loss" type="Tensor" qualifier="torch" value="tensor%280.5115%2C grad_fn=%3CMeanBackward0&gt;%29" isContainer="True" shape="()" />
+<var name="D_opt" type="Adam" qualifier="torch.optim.adam" value="Adam %28%0AParameter Group 0%0A    amsgrad%3A False%0A    betas%3A %280.9%2C 0.999%29%0A    capturable%3A False%0A    differentiable%3A False%0A    eps%3A 1e-08%0A    foreach%3A None%0A    fused%3A None%0A    lr%3A 0.06%0A    maximize%3A False%0A    weight_decay%3A 0%0A%29" isContainer="True" />
+<var name="EPSILON" type="int" qualifier="builtins" value="10" />
+<var name="EXP_NAME" type="str" qualifier="builtins" value="EOT_benchmark_EPSILON_10_DIM_2_SEED_42" />
+<var name="INIT_BY_SAMPLES" type="bool" qualifier="builtins" value="True" />
+<var name="IS_DIAGONAL" type="bool" qualifier="builtins" value="True" />
+<var name="MAX_STEPS" type="int" qualifier="builtins" value="10000" />
+<var name="N_POTENTIALS" type="int" qualifier="builtins" value="50" />
+<var name="OUTPUT_PATH" type="str" qualifier="builtins" value="../checkpoints/EOT_benchmark_EPSILON_10_DIM_2_SEED_42" />
+<var name="PCA" type="ABCMeta" qualifier="abc" value="%3Cclass %27sklearn.decomposition._pca.PCA%27&gt;" isContainer="True" />
+<var name="SAMPLING_BATCH_SIZE" type="int" qualifier="builtins" value="128" />
+<var name="SEED" type="int" qualifier="builtins" value="42" />
+<var name="X0" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 0.4027%2C -1.0801%5D%2C%0A        %5B-0.0046%2C  0.3290%5D%2C%0A        %5B 0.2601%2C -0.7964%5D%2C%0A        %5B 0.3550%2C  0.4854%5D%2C%0A        %5B-0.88...458%2C -0.3880%5D%2C%0A        %5B 0.3172%2C  0.0606%5D%2C%0A        %5B 0.7929%2C  0.4568%5D%2C%0A        %5B-0.9382%2C -0.1244%5D%2C%0A        %5B 0.3142%2C  0.3029%5D%5D%29" isContainer="True" shape="(128, 2)" />
+<var name="X1" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 2.2322%2C  4.6346%5D%2C%0A        %5B 4.4456%2C  2.1888%5D%2C%0A        %5B-3.3532%2C -3.4709%5D%2C%0A        %5B-3.4806%2C -3.6414%5D%2C%0A        %5B 4.40...082%2C -3.4918%5D%2C%0A        %5B-3.1744%2C  3.7883%5D%2C%0A        %5B 2.1620%2C  4.7989%5D%2C%0A        %5B-3.6714%2C -3.3203%5D%2C%0A        %5B-3.2671%2C  3.7870%5D%5D%29" isContainer="True" shape="(128, 2)" />
+<var name="X_sampler" type="GaussianMixture" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.GaussianMixture object at 0x0000017D90B42320&gt;" isContainer="True" />
+<var name="Y_sampler" type="OutputSampler" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.OutputSampler object at 0x0000017D909635E0&gt;" isContainer="True" />
+<var name="config" type="dict" qualifier="builtins" value="%7B%27BATCH_SIZE%27%3A 128%2C %27DIM%27%3A 2%2C %27D_GRADIENT_MAX_NORM%27%3A inf%2C %27D_LR%27%3A 0.06%2C %27EPSILON%27%3A 10%2C %27INIT_BY_SAMPLES%27%3A True%2C %27N_POTENTIALS%27%3A 50%2C %27SEED%27%3A 42%7D" isContainer="True" shape="8" />
+<var name="ground_truth_plan_sampler" type="PlanSampler" qualifier="eot_benchmark.gaussian_mixture_benchmark" value="%3Ceot_benchmark.gaussian_mixture_benchmark.PlanSampler object at 0x0000017D92A3C610&gt;" isContainer="True" />
+<var name="log_C" type="Tensor" qualifier="torch" value="tensor%28%5B0.3650%2C 0.2247%2C 0.1563%2C 0.1868%2C 0.1917%2C 0.1059%2C 0.2242%2C 0.3068%2C 0.1710%2C%0A        0.0922%2C 0.2076%2C 0.1854%2C 0.4166%2C 0.1054... 0.1259%2C 0.2209%2C 0.1380%2C 0.1715%2C 0.1699%2C 0.1908%2C 0.2190%2C 0.1951%2C 0.1733%2C%0A        0.2808%2C 0.1811%5D%2C grad_fn=%3CLogsumexpBackward0&gt;%29" isContainer="True" shape="(128,)" />
+<var name="log_potential" type="Tensor" qualifier="torch" value="tensor%28%5B-1.0225%2C  0.1968%2C  1.0938%2C -0.6963%2C -0.2466%2C -0.3396%2C -1.3817%2C -0.6849%2C%0A         0.0685%2C  0.4026%2C -0.5364%2C  0.2874%2C -0....6476%2C -1.4585%2C%0A        -1.1928%2C  0.3356%2C -0.9142%2C -0.5025%2C -1.4289%2C -0.4130%2C  0.0152%2C  0.5602%5D%2C%0A       grad_fn=%3CAddBackward0&gt;%29" isContainer="True" shape="(128,)" />
+<var name="pca" type="PCA" qualifier="sklearn.decomposition._pca" value="PCA%28n_components=2%29" isContainer="True" />
+<var name="samples" type="Tensor" qualifier="torch" value="tensor%28%5B%5B 0.7230%2C  0.2386%5D%2C%0A        %5B-0.2614%2C  0.0792%5D%2C%0A        %5B 0.0419%2C -0.2228%5D%2C%0A        ...%2C%0A        %5B-0.2551%2C  0.1862%5D%2C%0A        %5B 0.0468%2C -0.3379%5D%2C%0A        %5B 0.3564%2C  0.6292%5D%5D%29" isContainer="True" shape="(10000, 2)" />
+<var name="samples_pca" type="ndarray" qualifier="numpy" value="%5B%5B-0.64258599 -1.39104054%5D%2C %5B 0.14214965 -0.7757519 %5D%2C %5B 0.15839601 -1.20342986%5D%2C %5B 0.00627996 -1.37086062%5D%2C %5B 0.03848707 -1.13367464%5D%2C %5B 0.08137704 -0.74363009%5D%2C %5B-0.15759562 -1.15412894%5D%2C %5B 0.0946487  -0.42592297%5D%2C %5B 0.89316808 -1.23713706%5D%2C %5B-0.20076208 -1.20033024%5D%2C %5B-0.39000342 -1.20202045%5D%2C %5B 0.43718463 -0.64066041%5D%2C %5B-0.29346575 -0.65760409%5D%2C %5B-0.60118483 -1.05343862%5D%2C %5B 0.70337161 -0.48647035%5D%2C %5B 0.44636301 -0.82493898%5D%2C %5B 0.15755328 -0.61999751%5D%2C %5B 0.36807363 -1.09700221%5D%2C %5B 0.20173866 -1.43169679%5D%2C %5B-0.80072853 -1.00279519%5D%2C %5B-0.14918438 -1.92573233%5D%2C %5B 0.42674556 -2.1241168 %5D%2C %5B 0.5265156  -0.27738101%5D%2C %5B-0.54438619 -1.07393912%5D%2C %5B 0.18413944 -0.58371076%5D%2C %5B-0.93806351 -1.52907549%5D%2C %5B 0.15111209 -0.57906922%5D%2C %5B-0.26971707 -1.35600816%5D%2C %5B 0.43153324 -1.83198595%5D%2C %5B-1.03161494 -0.95731179%5D%2C %5B-0.65609377 -1.01628065%5D%2C %5B 0.03692231 -1.65529991%5D%2C %5B 0.2575454  -1.4025663 %5D%2C %5B-0.23923321 -0.51376974%5D%2C %5B-0.90928816 -1.25524611%5D%2C %5B 0.02363999 -0.49785422%5D%2C %5B 1.10139623 -0.93563775%5D%2C ..." isContainer="True" shape="(10000, 2)" />
+<var name="step" type="int" qualifier="builtins" value="6971" />
+<var name="target_samples" type="Tensor" qualifier="torch" value="tensor%28%5B%5B-3.6505%2C -3.6790%5D%2C%0A        %5B 4.4751%2C  2.3819%5D%2C%0A        %5B-3.1542%2C  3.8455%5D%2C%0A        ...%2C%0A        %5B-3.7946%2C -3.5502%5D%2C%0A        %5B-3.3077%2C  3.8491%5D%2C%0A        %5B-3.5310%2C -3.5500%5D%5D%29" isContainer="True" shape="(10000, 2)" />
+<var name="target_samples_pca" type="ndarray" qualifier="numpy" value="%5B%5B 5.20237645 -0.83373689%5D%2C %5B-4.76224827 -2.69497615%5D%2C %5B-0.66392913  3.90435067%5D%2C %5B-4.66299888  0.74195066%5D%2C %5B-0.52347749  3.70133567%5D%2C %5B-4.77996918 -2.84331596%5D%2C %5B-4.7506567  -2.87252082%5D%2C %5B-0.47655736  3.95256388%5D%2C %5B 5.15459223 -0.62237789%5D%2C %5B-4.48763954 -2.74936818%5D%2C %5B-4.64765127  0.59198808%5D%2C %5B-4.76889796  0.65557118%5D%2C %5B-4.78751546 -2.69105873%5D%2C %5B-4.92428553  0.53376671%5D%2C %5B-4.6822179   0.72083753%5D%2C %5B-0.33184795  4.07623002%5D%2C %5B 4.95575919 -0.79308409%5D%2C %5B-4.7058346  -2.99802667%5D%2C %5B-4.48833737 -3.0013081 %5D%2C %5B-0.68244157  3.94851776%5D%2C %5B-0.44941714  3.84324924%5D%2C %5B 4.92630206 -0.88961237%5D%2C %5B-0.46715682  3.89184918%5D%2C %5B 4.94345974 -0.91422518%5D%2C %5B-4.78930903  0.78101026%5D%2C %5B 5.16907268 -0.44794421%5D%2C %5B-4.75766824  0.56543643%5D%2C %5B-4.8658317   0.81098198%5D%2C %5B-4.7733495  -2.83229777%5D%2C %5B-4.73824721  0.70880356%5D%2C %5B-4.63743026  0.69210235%5D%2C %5B-4.85810416  0.66436266%5D%2C %5B 5.05649381 -0.71970997%5D%2C %5B-0.45925022  3.83254391%5D%2C %5B-0.50044318  3.83888959%5D%2C %5B 5.11130076 -0.72315736%5D%2C %5B-0.78929163  4.0057374 %5D%2C ..." isContainer="True" shape="(10000, 2)" />
+</xml>
