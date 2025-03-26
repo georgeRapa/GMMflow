@@ -3,14 +3,15 @@ by [George Rapakoulias](https://scholar.google.com/citations?user=f-2iPeYAAAAJ&h
 
 In the image translation example, we used the setup of [LightSB](https://github.com/ngushchin) and parts of the code for setting up the [ALAE autoencoder](https://github.com/podgorskiy/ALAE).
 
-
 <div align="center">
-    <img src="figures/A2C.png" height="246">
+    <img src="figures/GT2DCSL.png" height="150"> &ensp; <img src="figures/GT2DCSL.gif" height="150">
 </div>
 
+
 <div align="center">
-    <img src="figures/GT2DCSL.png" height="100"> &ensp; <img src="figures/GT2DCSL.gif" height="100">
+    <img src="figures/A2C.png" height="300">
 </div>
+
 
 
 Cite as 
