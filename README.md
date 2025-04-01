@@ -1,4 +1,4 @@
-_This is a pytorch implementation of our recent work [**Go With the Flow: Fast Diffusion for Gaussian Mixture Models**](https://arxiv.org/abs/2412.09059)
+This is a pytorch implementation of our recent work [**Go With the Flow: Fast Diffusion for Gaussian Mixture Models**](https://arxiv.org/abs/2412.09059)
 by [George Rapakoulias](https://scholar.google.com/citations?user=f-2iPeYAAAAJ&hl=en), [Ali Reza Pedram](https://scholar.google.com/citations?user=OIFfnsEAAAAJ&hl=en&oi=ao) and [Panagiotis Tsiotras](https://scholar.google.com/citations?user=qmVayjgAAAAJ&hl=en&oi=ao)
 
 In the image translation example, we used the setup of [LightSB](https://github.com/ngushchin) and parts of their setup code for the [ALAE autoencoder](https://github.com/podgorskiy/ALAE).
