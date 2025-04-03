@@ -6,3 +6,4 @@
 /third_party/LightSB/data/gender.npy
 /third_party/LightSB/data/latents.npy
 /third_party/LightSB/data/test_images.npy
+/.idea
