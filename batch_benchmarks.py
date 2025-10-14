@@ -1,6 +1,6 @@
 import gc
 
-from old.NIPS.gwtf_source import *
+from src import *
 import torchsde
 from sklearn.mixture import GaussianMixture
 

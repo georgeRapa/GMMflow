@@ -1,4 +1,5 @@
-from old.NIPS.gwtf_source import *
+from src import *
+import torch
 import torchsde
 from sklearn.mixture import GaussianMixture
 
@@ -75,8 +76,7 @@ for i, DIM in enumerate(DIM_B):
         # comp = Independent(Normal(Mu1, Sigma1), 1)
         # gmm1 = MixtureSameFamily(mix, comp)
 
-        # sde = GMMflow_analytic(Mu0, Mu1, Sigma0, Sigma1, W0=W0, W1=W1, cov_type = 'diag', Lambda=None, omega=np.sqrt(EPS), device=device)
-        sde = GMMflow_OP(Mu0, Mu1, Sigma0, Sigma1, W0=W0, W1=W1, Lambda=None, omega=np.sqrt(EPS), device=device)
+        sde = GMMflow(Mu0, Mu1, Sigma0, Sigma1, W0=W0, W1=W1, Lambda=None, omega=np.sqrt(EPS), device=device)
 
         run_times[i,j] = time.time() - t0
 

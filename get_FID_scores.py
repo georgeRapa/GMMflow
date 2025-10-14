@@ -1,8 +1,7 @@
 from sklearn.mixture import GaussianMixture
-from src import GMMflow
 import torchsde
 import time
-from src.my_utils import *
+from src import *
 from tqdm import tqdm
 from PIL import Image
 sys.path.append("third_party/LightSB")
@@ -11,7 +10,7 @@ from alae_ffhq_inference import load_model, encode, decode
 import tracker
 import os, shutil
 from pytorch_fid import fid_score
-
+import torch
 
 # ###########
 # you might need this for newer pytorch version > 2.6
@@ -44,7 +43,7 @@ Sigma1 = torch.tensor(gmm1.covariances_, dtype = torch.float32, device=device)
 W0 = torch.tensor(gmm0.weights_, dtype = torch.float32, device=device)
 W1 = torch.tensor(gmm1.weights_, dtype = torch.float32, device=device)
 
-sde = GMMflow(Mu0, Mu1, Sigma0, Sigma1, W0, W1, omega=np.sqrt(epsilon), device = device)
+sde = GMMflow_fast(Mu0, Mu1, Sigma0, Sigma1, W0, W1, omega=np.sqrt(epsilon), device = device)
 end = time.time()
 print("Training complete. Training time: ", end-start)
 
