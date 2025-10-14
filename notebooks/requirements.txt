@@ -1,0 +1,11 @@
+torch==2.5.1 # installtion will depend on architecture, for example if CUDA is available 2.8.0+cu126 might be preferred
+numpy==2.3.3
+scipy==1.16.2
+POT==0.9.6.post1
+scikit-learn==1.7.2
+tqdm==4.67.1
+matplotlib==3.10.7
+torchsde==0.2.6
+more-itertools==10.8.0
+mosek==11.0.29
+imageio==2.37.0

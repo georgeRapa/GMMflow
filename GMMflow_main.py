@@ -3,6 +3,8 @@ import numpy as np
 import torch.nn as nn
 from torch.distributions import MultivariateNormal, Normal, Independent, Categorical, MixtureSameFamily
 import ot
+from alae_ffhq_inference import load_model, encode, decode
+
 class GMMflow(nn.Module):
     def __init__(self, Mu0, Mu1, S0, S1, W0=None, W1=None, Lambda=None, epsilon=0.5, device='cpu'):
         super().__init__()
@@ -86,14 +88,31 @@ class GMMflow(nn.Module):
         #  Build component level transport cost by numerically integrating equation (7a)
         #  for the optimal policy given by equations (8), (10a)-(10e).
 
-        T = torch.linspace(0, 0.99, 100, device=self.device)[:, None, None, None]
+        # T = torch.linspace(0, 0.99, 100, device=self.device)[:, None, None, None]
+        #
+        # self.C = (0.01 * (self.St(T) ** 2 / self.Sigma(T)).sum(dim=0).sum(dim=-1)
+        #      + torch.linalg.vector_norm(self.v, dim=-1)**2) # component level transport cost.
+        #
+        # self.Lambda = ot.emd(self.W0,
+        #                      self.W1,
+        #                      self.C) #ot.dist(self.Mu0, self.Mu1) works also, if all the covariances are the same.
 
-        self.C = (0.01 * (self.St(T) ** 2 / self.Sigma(T)).sum(dim=0).sum(dim=-1)
-             + torch.linalg.vector_norm(self.v, dim=-1)**2) # component level transport cost.
+        I = torch.ones(self.N0, self.N1, self.n, device=self.device)
+        M_eps = I + ( I + 16/(4*self.epsilon**4) * self.S0.unsqueeze(dim=1).expand(self.N0, self.N1, self.n) * self.S1.unsqueeze(dim=0).expand(self.N0, self.N1, self.n) ).sqrt()
+        # self.C_full = (ot.dist(self.Mu0, self.Mu1)
+        #               + (self.S0.unsqueeze(dim=1).expand(self.N0, self.N1, self.n) + self.S1.unsqueeze(dim=0).expand(self.N0, self.N1, self.n)).sum(dim=-1)
+        #               - self.omega**2*(M_eps.sum(dim=-1) - M_eps.log().sum(dim=-1)
+        #                                  # +self.S0.unsqueeze(dim=1).expand(self.N0, self.N1, self.n).log().sum(dim=-1)
+        #                                  +self.S1.unsqueeze(dim=0).expand(self.N0, self.N1, self.n).log().sum(dim=-1)))
+
+        # # analytic cost (only the relevant terms)
+        self.C = ot.dist(self.Mu0, self.Mu1) - self.epsilon**2*(M_eps.sum(dim=-1) - M_eps.log().sum(dim=-1))
 
         self.Lambda = ot.emd(self.W0,
                              self.W1,
                              self.C) #ot.dist(self.Mu0, self.Mu1) works also, if all the covariances are the same.
+
+
     def calc_u(self, X, t):
         # Calculate velocity field from conditional policies and the component-level transport plan.
         # Parallelized with respect to Batch and component dimensions.
@@ -130,7 +149,7 @@ class GMMflow(nn.Module):
         return self.epsilon * torch.eye(self.n, device=self.device).repeat(y.shape[0], 1, 1)
 
     def calc_expJ(self):
-        # calculate the upper bound from equation (16b) for the transport cost.
+        # calculate the upper bound from equation (15a) for the transport cost.
 
         return (self.Lambda * self.C).sum()
 
@@ -148,7 +167,7 @@ class GMMflow(nn.Module):
         # at time t without simulating the dynamics.
         self.calc_rho(t).sample([B])
     def calc_J(self, B=5000):
-        # calculate the true transport cost of the policy
+        # calculate the true transport cost of the policy from Equation (12a)
 
         J = torch.tensor(0., device=self.device)
         T = torch.linspace(0, 0.99, 100, device=self.device)
